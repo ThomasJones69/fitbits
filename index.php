@@ -9,25 +9,22 @@
     <form method="POST">
 
         <div class="container">
-            <label><b>User</b></label>
+            <label><b>User</b></label><br>
             <input type="text" placeholder="Enter Username" name="user" required>
             <br>
-            <label><b>Password</b></label>
+            <label><b>Password</b></label><br>
             <input type="password" placeholder="Enter Password" name="pass" required>
             <br>
             <button type="submit" >Log In</button>
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-        </div>
     </form>
 </head>
 <body>
     <?php
-    $hostname = 'localhost';
-    $databasenaam = 'fitbits';
-    $username = 'root';
-    $password = '';
+    include 'fitconnections.php';
+    $conn = connectToDB();
+    login($conn);
     ?>
 </body>
 </html>
