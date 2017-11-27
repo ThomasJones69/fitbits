@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'fitconnections.php';
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,10 +26,6 @@
     </form>
 </head>
 <body>
-    <?php
-    include 'fitconnections.php';
-    $conn = connectToDB();
-    login($conn);
-    ?>
+
 </body>
 </html>
