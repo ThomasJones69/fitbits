@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'fitconnections.php';
+include 'fitBitsFunctions.php';
+echo showHeader();
 ?>
 
 <html>
