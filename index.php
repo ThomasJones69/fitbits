@@ -21,7 +21,12 @@ echo showHeader();
             <label><b>Password</b></label><br>
             <input type="password" placeholder="Enter Password" name="pass" required>
             <br>
-            <button type="submit" >Log In</button>
+            <label><b>Function</b></label><br>
+            <input type="radio" name="function" value="Personal"> Personal Trainer<br>
+            <input type="radio" name="function" value="Fitness"> Fitness Trainer<br>
+            <input type="radio" name="function" value="Group"> Group Trainer<br>
+            <button type="submit" value="Get Selected Values" >Log In</button>
+ 
         </div>
 
     </form>

@@ -10,7 +10,7 @@ echo showHeader();
             function gtbutton(parameter2) {
                 switch (parameter2) {
                     case 1:
-                        document.location = "index.php";
+                        document.location = "welcome.php";
                         break;
                     case 2:
                         document.location = "gtAfspraakVastleggen.php";
@@ -33,6 +33,9 @@ echo showHeader();
 
     </head>
     <body>
+        <div class="transbox">
+            <h1>Group Trainers Page</h1>
+        </div>
         <button type="button" id = 1 onclick="gtbutton(1)">Home</button>
         <button type="button" id = 2 onclick="gtbutton(2)">Afspraak vastleggen</button>
         <button type="button" id = 3 onclick="gtbutton(3)">Intake gesprek</button>
