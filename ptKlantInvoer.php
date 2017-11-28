@@ -5,30 +5,30 @@ echo showHeader();
 ?>
 <html>
     <head>        
-    
-    <script>
 
-    </script>
-</head>
+        <script>
 
-<body>
-    
-<div class="transbox">
-    <h2>New Client's Page</h2>
-</div>
-<form method="POST">
+        </script>
+    </head>
 
-        <div class="container">
-            <fieldset>
-                <label><b>Client Name</b></label><br>
-                <input type="text" placeholder="Enter Clients Name" name="cname" required>
-                <br>
-                <label><b>Address</b></label><br>
-                <input type="text" placeholder="Enter Clients Address" name="caddress" required>
-                <br>
-                <label><b>Registration Date</b></label><br>
-                <input type="date" name="cregDate">
-            </fieldset>
+    <body>
+
+        <div class="transbox">
+            <h2>New Client's Page</h2>
+        </div>
+        <form method="POST">
+
+            <div class="container">
+                <fieldset>
+                    <label><b>Client Name</b></label><br>
+                    <input type="text" placeholder="Enter Clients Name" name="cname" required>
+                    <br>
+                    <label><b>Address</b></label><br>
+                    <input type="text" placeholder="Enter Clients Address" name="caddress" required>
+                    <br>
+                    <label><b>Registration Date</b></label><br>
+                    <input type="date" name="cregDate">
+                </fieldset>
             </div><br>
             <fieldset>
                 <label><b>Age:</b></label><br>
@@ -45,14 +45,9 @@ echo showHeader();
                 <input type="radio" name="cgender" value="Male">Male
                 <input type="radio" name="cgender" value="Female">Female<br>
             </fieldset>
-                <button type="submit">Save</button>
-             
-                
-
-
- 
-
-    </form>
-</body>
+            <button type="submit">Save</button>
+        </form>
+        <?php ptKlantInvoer($conn); ?>
+    </body>
 
 </html>

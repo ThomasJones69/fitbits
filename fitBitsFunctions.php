@@ -17,10 +17,6 @@ function login($conn) {
         $_SESSION['name'] = $name;
         $password = $_REQUEST['pass'];
         $_SESSION['pwd'] = $password;
-//        $tfunction = $_REQUEST['radio'];
-//        $_SESSION['position'] = $tfunction;
-//        echo $name . $password . $tfunction;
-//        $sql = "SELECT * FROM `trainer` WHERE `tname` = '$name' AND `tpassword` = '$password' AND `tfunction` = '$tfunction'";
         $sql = "SELECT * FROM `trainer` WHERE `tname` = '$name' AND `tpassword` = '$password'";
         echo $sql;
         $result = $conn->query($sql);
@@ -53,5 +49,19 @@ function showHeader() {
 HEADSTRING;
     return $returnString;
 }
-
+function ptKlantInvoer($conn){
+    if (isset($_POST['cname'])){
+        $cname = $_REQUEST['cname'];
+        $caddress = $_REQUEST['caddress'];
+        $cregDate = $_REQUEST['cregDate'];
+        $cage = $_REQUEST['cage'];
+        $cDob = $_REQUEST['cDob'];
+        $cweight = $_REQUEST['cweight'];
+        $cbodyFat = $_REQUEST['cbodyFat'];
+        $cbloodPressure = $_REQUEST['cbloodPressure'];
+        $cgender = $_REQUEST['cgender'];
+        $sql = "INSERT INTO `clients`(`cname`, `caddress`, `cregDate`, `cage`, `cDob`, `cweight`, `cbodyFat`, `cbloodPressure`, `cgender`) VALUES ('$cname','$caddress','$cregDate','$cage','$cDob','$cweight','$cbodyFat','$cbloodPressure','$cgender')";
+        $result = $conn->query($sql);
+    }
+}
 ?>
