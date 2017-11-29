@@ -46,24 +46,3 @@ echo showHeader();
     </body>
 </html>
 
-
-<!--<html>
-    <head>
-        <script>
-            function voorbeeldfunctie(parameter2) {
-                switch (parameter2) {
-                    case 'a':
-                        document.location = 'jojo.php';
-                        break;
-                    case 'b':
-                        document.location = 'jojo2.php';
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <span onclick="voorbeeldfunctie('a')">link1</span>
-        <br>
-        <span onclick="voorbeeldfunctie('b')">link2</span>        
-    </body>
-</html>-->

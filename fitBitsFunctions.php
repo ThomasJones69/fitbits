@@ -49,8 +49,9 @@ function showHeader() {
 HEADSTRING;
     return $returnString;
 }
-function ptKlantInvoer($conn){
-    if (isset($_POST['cname'])){
+
+function ptKlantInvoer($conn) {
+    if (isset($_POST['cname'])) {
         $cname = $_REQUEST['cname'];
         $caddress = $_REQUEST['caddress'];
         $cregDate = $_REQUEST['cregDate'];
@@ -64,4 +65,11 @@ function ptKlantInvoer($conn){
         $result = $conn->query($sql);
     }
 }
+
+function ptKlantBekijk($conn) {
+
+    $sql = "SELECT * FROM `clients`;";
+    $result = $conn->query($sql);
+}
+
 ?>

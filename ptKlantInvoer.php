@@ -46,6 +46,8 @@ echo showHeader();
                 <input type="radio" name="cgender" value="Female">Female<br>
             </fieldset>
             <button type="submit">Save</button>
+            <button onclick="location.href='http://localhost/fitbit/ptPage.php'" type="button">
+     Back to Home</button>
         </form>
         <?php ptKlantInvoer($conn); ?>
     </body>
