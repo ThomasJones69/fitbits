@@ -1,6 +1,7 @@
 <?php
 
 //session_start();
+//        <a href=logout.php >log out</a>
 
 $conn = new mysqli('localhost', 'root', '', 'fitbits');
 
@@ -18,7 +19,7 @@ function login($conn) {
         $password = $_REQUEST['pass'];
         $_SESSION['pwd'] = $password;
         $sql = "SELECT * FROM `trainer` WHERE `tname` = '$name' AND `tpassword` = '$password'";
-        echo $sql;
+//        echo $sql;
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         if ($result->num_rows == 0) {
@@ -42,10 +43,14 @@ function showHeader() {
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="fitcss.css">
-        <script src="fitscript.js"></script>
+        <script src="js/fitscript.js"></script>
+        <script src="js/jquery-3.2.1.js`"></script>
+        
     </head>
     <body>
-        <a href=logout.php >log out</a>
+
+          <button onclick="location.href = 'http://localhost/fitbit/logout.php'" type="button">
+            Logout</button><br>
 HEADSTRING;
     return $returnString;
 }

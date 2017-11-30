@@ -1,16 +1,21 @@
 <?php
 session_start();
 include 'fitBitsFunctions.php';
-echo showHeader();
+
 ?>
 
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="fitcss.css">
+        <script src="js/fitscript.js"></script>
+        <script src="js/jquery-3.2.1.js`"></script>
         <meta charset="UTF-8">
         <link rel = "stylesheet" type = "text/css" href="fitcss.css">
         <title>Fit-Bits</title>
     <h1>Welcome to Fit-Bits</h1>
     <h2>Please Log-In</h2>
+    </head>
+
 
     <form method="POST">
 
@@ -30,7 +35,7 @@ echo showHeader();
         </div>
 
     </form>
-</head>
+
 <body>
 
 </body>
