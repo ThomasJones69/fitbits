@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'fitBitsfunctions.php';
+include 'fitBitsFunctions.php';
 echo showHeader();
 ?>
 <html>
@@ -9,6 +9,10 @@ echo showHeader();
             function rowid(id) {
                 alert(id);
             }
+            
+            function deleterec(id) {
+                alert();
+            }
         </script>
     </head>
 
@@ -16,12 +20,12 @@ echo showHeader();
         <div class="transbox">
             <h2>View Clients</h2>
         </div>
-        <button onclick="location.href = 'http://localhost/fitbit/ptPage.php'" type="button">
+        <button onclick="location.href = 'ptPage.php'" type="button">
             Back to Home</button>
         <?php
 //        ptKlantBekijk($conn);
 
-        $sql = "SELECT * FROM `clients`;";
+        $sql = "SELECT * FROM `tj_clients`;";
         $result = $conn->query($sql);
         echo "<table id='clients'>";
         echo "<th>" . "Name" . "</th>";
@@ -33,6 +37,7 @@ echo showHeader();
         echo "<th>" . "Body Fat" . "</th>";
         echo "<th>" . "Blood Press." . "</th>";
         echo "<th>" . "Gender" . "</th>";
+        echo "<th>" . "Action" . "</th>";
         while ($row = $result->fetch_assoc()) {
             echo "\n<tr onclick='rowid(" . $row['id'] . ")'>";
             echo "<td>" . $row['cname'] . "</td>";
@@ -44,6 +49,7 @@ echo showHeader();
             echo "<td>" . $row['cbodyFat'] . "</td>";
             echo "<td>" . $row['cbloodPressure'] . "</td>";
             echo "<td>" . $row['cgender'] . "</td>";
+            echo "<td><button onclick='deleterec(" . $row['id'] .")' >Delete </button></td>";
             echo "</tr>";
         }
         ?>

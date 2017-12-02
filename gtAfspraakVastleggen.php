@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'fitBitsfunctions.php';
+include 'fitBitsFunctions.php';
 echo showHeader();
 ?>
 <html>

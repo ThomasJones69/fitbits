@@ -8,9 +8,8 @@ include 'fitBitsFunctions.php';
     <head>
         <link rel="stylesheet" type="text/css" href="fitcss.css">
         <script src="js/fitscript.js"></script>
-        <script src="js/jquery-3.2.1.js`"></script>
+        <script src="js/jquery-3.2.1.js"></script>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" type = "text/css" href="fitcss.css">
         <title>Fit-Bits</title>
     <h1>Welcome to Fit-Bits</h1>
     <h2>Please Log-In</h2>

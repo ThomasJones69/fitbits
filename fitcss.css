@@ -15,7 +15,7 @@ input[type=text], input[type=password] {
 }
 
 body {
-    background-image:url("media/fitsplash.jpg");
+    background-image:url('media/fitsplash.jpg');
     color: white;
 }
 
@@ -31,7 +31,8 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 15%;
+/*    width: 15%;*/
+ 
     border-radius: 8px;
 }
 
@@ -80,4 +81,8 @@ fieldset {
     text-align: left;
     background-color: white;
     color: black;
+}
+
+#clients th:hover {
+    background-color: white;
 }

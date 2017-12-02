@@ -2,8 +2,10 @@
 
 //session_start();
 //        <a href=logout.php >log out</a>
+//        <link rel="stylesheet" type="text/css" href="fitcss.css">
 
-$conn = new mysqli('localhost', 'root', '', 'fitbits');
+//$conn = new mysqli('localhost', 'root', '', 'fitbits');
+$conn = new mysqli('localhost', 'phpzwollegen1', 'itphtoren', 'phpzwollegen2');
 
 if (mysqli_connect_errno()) {
     print_f("Connect failed: %s\n", mysqli_connect_error());
@@ -18,7 +20,7 @@ function login($conn) {
         $_SESSION['name'] = $name;
         $password = $_REQUEST['pass'];
         $_SESSION['pwd'] = $password;
-        $sql = "SELECT * FROM `trainer` WHERE `tname` = '$name' AND `tpassword` = '$password'";
+        $sql = "SELECT * FROM `tj_trainer` WHERE `tname` = '$name' AND `tpassword` = '$password'";
 //        echo $sql;
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
@@ -32,7 +34,7 @@ function login($conn) {
 }
 
 function determinGroup($conn) {
-    $sqlFunction = "SELECT * FROM `trainer` WHERE `tfunction` = 'Group'";
+    $sqlFunction = "SELECT * FROM `tj_trainer` WHERE `tfunction` = 'Group'";
     $result = $conn->query($sqlFunction);
     $functionname = $result;
     return $functionname;
@@ -42,14 +44,14 @@ function showHeader() {
     $returnString = <<<HEADSTRING
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="fitcss.css">
+
         <script src="js/fitscript.js"></script>
-        <script src="js/jquery-3.2.1.js`"></script>
-        
+        <script src="js/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="fitcss.css">        
     </head>
     <body>
 
-          <button onclick="location.href = 'http://localhost/fitbit/logout.php'" type="button">
+          <button onclick="location.href = 'logout.php'" type="button">
             Logout</button><br>
 HEADSTRING;
     return $returnString;
@@ -66,14 +68,14 @@ function ptKlantInvoer($conn) {
         $cbodyFat = $_REQUEST['cbodyFat'];
         $cbloodPressure = $_REQUEST['cbloodPressure'];
         $cgender = $_REQUEST['cgender'];
-        $sql = "INSERT INTO `clients`(`cname`, `caddress`, `cregDate`, `cage`, `cDob`, `cweight`, `cbodyFat`, `cbloodPressure`, `cgender`) VALUES ('$cname','$caddress','$cregDate','$cage','$cDob','$cweight','$cbodyFat','$cbloodPressure','$cgender')";
+        $sql = "INSERT INTO `tj_clients`(`cname`, `caddress`, `cregDate`, `cage`, `cDob`, `cweight`, `cbodyFat`, `cbloodPressure`, `cgender`) VALUES ('$cname','$caddress','$cregDate','$cage','$cDob','$cweight','$cbodyFat','$cbloodPressure','$cgender')";
         $result = $conn->query($sql);
     }
 }
 
 function ptKlantBekijk($conn) {
 
-    $sql = "SELECT * FROM `clients`;";
+    $sql = "SELECT * FROM `tj_clients`;";
     $result = $conn->query($sql);
 }
 

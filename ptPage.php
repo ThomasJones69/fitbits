@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'fitBitsfunctions.php';
+include 'fitBitsFunctions.php';
 echo showHeader();
 ?>
 <html>
@@ -36,7 +36,7 @@ echo showHeader();
         </div>
         <button type="button" id = 1 onclick="ptbutton(1)">Home</button>    
         <button type="button" id = 2 onclick="ptbutton(2)">New Client</button>
-        <button type="button" id = 3 onclick="ptbutton(3)">View Client</button>
+        <button type="button" id = 3 onclick="ptbutton(3)">View Clients</button>
         <button type="button" id = 4 onclick="ptbutton(4)">Nutrition plans</button>
         <button type="button" id = 5 onclick="ptbutton(5)">Training plans</button>
         <button type="button" id = 6 onclick="ptbutton(6)">Appointments</button>
