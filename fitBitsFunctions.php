@@ -4,8 +4,8 @@
 //        <a href=logout.php >log out</a>
 //        <link rel="stylesheet" type="text/css" href="fitcss.css">
 
-//$conn = new mysqli('localhost', 'root', '', 'fitbits');
-$conn = new mysqli('localhost', 'phpzwollegen1', 'itphtoren', 'phpzwollegen2');
+$conn = new mysqli('localhost', 'root', '', 'fitbits');
+//$conn = new mysqli('localhost', 'phpzwollegen1', 'itphtoren', 'phpzwollegen2');
 
 if (mysqli_connect_errno()) {
     print_f("Connect failed: %s\n", mysqli_connect_error());

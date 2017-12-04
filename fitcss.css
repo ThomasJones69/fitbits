@@ -24,16 +24,14 @@ body {
     margin: auto;
 }
 button {
-    /*background-color: #4CAF50;*/
     background-color: cornflowerblue;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-/*    width: 15%;*/
- 
-    border-radius: 8px;
+    width: 15%;
+     border-radius: 8px;
 }
 
 button:hover {
@@ -85,4 +83,8 @@ fieldset {
 
 #clients th:hover {
     background-color: white;
+}
+
+.delete{
+    width: 80px;
 }
